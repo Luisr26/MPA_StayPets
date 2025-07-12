@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>PetCare Center - Worker Dashboard</title>
+</head>
+<body>
+    <!-- Worker Dashboard View -->
+    <section id="dashboard-worker" class="worker-dashboard">
+        <header class="worker-header">
+            <div class="worker-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <span>PetCare Center</span>
+            </div>
+            <div class="worker-nav">
+                <button id="logout-btn" class="logout-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.59L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <main class="worker-main">
+            <div class="welcome-section">
+                <h1>Welcome to the Worker Dashboard!</h1>
+                <p>Manage users, pets and veterinary stays</p>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 7c0-2.21-1.79-4-4-4S8 4.79 8 7s1.79 4 4 4 4-1.79 4-4zm-4 2c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-5 6c-1.66 0-3 1.34-3 3v1h2v-1c0-.55.45-1 1-1s1 .45 1 1v1h2v-1c0-1.66-1.34-3-3-3zm11-2c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-2 4c-.55 0-1 .45-1 1v1h2v-1c0-.55-.45-1-1-1z"/>
+                        </svg>
+                    </div>
+                    <h3>Users</h3>
+                    <div class="container-btn-stat">
+                        <p class="stat-number" id="users-count">0</p>
+                        <p class="stat-label">Registered</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.5 9.5m-2.5 0a2.5 2.5 0 1 1 5 0a2.5 2.5 0 1 1 -5 0"/>
+                            <path d="M9 5.5m-2.5 0a2.5 2.5 0 1 1 5 0a2.5 2.5 0 1 1 -5 0"/>
+                            <path d="M15 5.5m-2.5 0a2.5 2.5 0 1 1 5 0a2.5 2.5 0 1 1 -5 0"/>
+                            <path d="M19.5 9.5m-2.5 0a2.5 2.5 0 1 1 5 0a2.5 2.5 0 1 1 -5 0"/>
+                            <path d="M17.5 15.5c0 1.5-1.5 3-3 3s-3-1.5-3-3s1.5-3 3-3s3 1.5 3 3z"/>
+                            <path d="M5 15.5c0 1.5-1.5 3-3 3s-3-1.5-3-3s1.5-3 3-3s3 1.5 3 3z"/>
+                        </svg>
+                    </div>
+                    <h3>Pets</h3>
+                    <div class="container-btn-stat">
+                        <p class="stat-number" id="pets-count">0</p>
+                        <p class="stat-label">Registered</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- User and Pet Management -->
+            <div class="management-section">
+                <h2>User and Pet Management</h2>
+                
+                <!-- User List -->
+                <div class="users-section">
+                    <h3>Registered Users</h3>
+                    <div class="users-container" id="users-container">
+                        <!-- Users will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Pet List -->
+                <div class="pets-section">
+                    <h3>Registered Pets</h3>
+                    <div class="pets-container" id="pets-container">
+                        <!-- Pets will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal to manage stays -->
+        <div id="stay-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="stay-modal-title">Manage Stay</h3>
+                    <button class="modal-close" id="close-stay-modal">×</button>
+                </div>
+                <form id="stay-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="stay-pet-name">Pet</label>
+                            <input type="text" id="stay-pet-name" readonly />
+                        </div>
+                        <div class="input-group">
+                            <label for="stay-owner">Owner</label>
+                            <input type="text" id="stay-owner" readonly />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="stay-start-date">Start Date</label>
+                            <input type="date" id="stay-start-date" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="stay-end-date">End Date</label>
+                            <input type="date" id="stay-end-date" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group full-width">
+                            <label for="stay-notes">Notes</label>
+                            <textarea id="stay-notes" rows="3" placeholder="Observations about the stay..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="save-btn" id="save-stay-btn">Save Stay</button>
+                        <button type="button" class="cancel-btn" id="cancel-stay-btn">Cancel</button>
+                        <button type="button" class="delete-btn" id="delete-stay-btn" style="display: none;">Delete Stay</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </main>
+    </section>
+    <script type="module" src="../js/dashboardW.js"></script>
+</body>
+</html>

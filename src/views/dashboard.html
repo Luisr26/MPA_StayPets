@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>PetCare Center - My Dashboard</title>
+</head>
+
+<body>
+    <!-- User Dashboard View -->
+    <section id="dashboard" class="worker-dashboard">
+        <header class="worker-header">
+            <div class="worker-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+                <span>PetCare Center</span>
+            </div>
+            <div class="worker-nav">
+                <button id="logout-btn" class="logout-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.59L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <main class="worker-main">
+            <div class="welcome-section">
+                <h1>Welcome to your Pet Dashboard!<span id="name-user"></span></h1>
+                <p>Manage the care and well-being of your furry companions</p>
+            </div>
+            <div class="quick-actions">
+                <h2>Pet Management</h2>
+                <div class="actions-grid">
+                    <button id="add-pet-btn" class="action-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        <span>Add Pet</span>
+                    </button>
+                    <button id="refresh-stays-btn" class="action-btn">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                        </svg>
+                        <span>Refresh Stays</span>
+                    </button>
+                    <button id="debug-btn" class="action-btn" style="background: #ff6b6b;">
+                        <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>Debug Stays</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h2>My Pets</h2>
+                <div class="pets-container">
+                    <!-- Pet Card -->
+                    <div class="pet-card">
+                        <div class="pet-image-container">
+                            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Pet" class="pet-image">
+                        </div>
+                        <div class="pet-info">
+                            <h3 class="pet-name">Max</h3>
+                            <div class="pet-details">
+                                <p class="pet-age">
+                                    <span class="detail-label">Age:</span> 3 years
+                                </p>
+                                <p class="pet-breed">
+                                    <span class="detail-label">Breed:</span> Golden Retriever
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pet-actions">
+                            <button class="edit-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="delete-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                </svg>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pet Card -->
+                    <div class="pet-card">
+                        <div class="pet-image-container">
+                            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Pet" class="pet-image">
+                        </div>
+                        <div class="pet-info">
+                            <h3 class="pet-name">Luna</h3>
+                            <div class="pet-details">
+                                <p class="pet-age">
+                                    <span class="detail-label">Age:</span> 2 years
+                                </p>
+                                <p class="pet-breed">
+                                    <span class="detail-label">Breed:</span> Siamese
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pet-actions">
+                            <button class="edit-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="delete-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                </svg>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pet Card -->
+                    <div class="pet-card">
+                        <div class="pet-image-container">
+                            <img src="https://images.pexels.com/photos/1350560/pexels-photo-1350560.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" alt="Pet" class="pet-image">
+                        </div>
+                        <div class="pet-info">
+                            <h3 class="pet-name">Rocky</h3>
+                            <div class="pet-details">
+                                <p class="pet-age">
+                                    <span class="detail-label">Age:</span> 5 years
+                                </p>
+                                <p class="pet-breed">
+                                    <span class="detail-label">Breed:</span> French Bulldog
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pet-actions">
+                            <button class="edit-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="delete-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                </svg>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal to add pet -->
+        <div id="pet-form-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Add New Pet</h3>
+                    <button class="modal-close" id="cancel-pet-form">×</button>
+                </div>
+                <form id="pet-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="pet-name">Name</label>
+                            <input type="text" id="pet-name" placeholder="Your pet's name" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="pet-type">Type</label>
+                            <input type="text" id="pet-type" placeholder="Dog, Cat, etc." required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="pet-age">Age (years)</label>
+                            <input type="number" id="pet-age" placeholder="0" required min="0" />
+                        </div>
+                        <div class="input-group">
+                            <label for="pet-image">Image (URL)</label>
+                            <input type="url" id="pet-image" placeholder="https://example.com/image.jpg" />
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="save-btn">Save Pet</button>
+                        <button type="button" id="cancel-pet-form" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+
+</html>

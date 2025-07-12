@@ -1,0 +1,49 @@
+{
+  "roles": [
+    {
+      "id": "1",
+      "name": "worker"
+    },
+    {
+      "id": "2",
+      "name": "customer"
+    }
+  ],
+  "users": [
+    {
+      "id": "339c",
+      "name": "Luis",
+      "roleId": 1,
+      "email": "luisoro009@gmail.com",
+      "password": "Luis123",
+      "phone": "18723893791"
+    },
+    {
+      "id": "7fd4",
+      "name": "Luis Orozco",
+      "email": "luisoro@gmail.com",
+      "phone": "3045233125",
+      "password": "luis123+",
+      "roleId": 2
+    }
+  ],
+  "pets": [
+    {
+      "id": "c2ac",
+      "name": "jgh",
+      "breed": "kkljk",
+      "age": 23,
+      "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5TaW4gSW1hZ2VuPC90ZXh0Pjwvc3ZnPg==",
+      "userId": "7fd4"
+    }
+  ],
+  "stays": [
+    {
+      "id": "2422",
+      "petId": "c2ac",
+      "startDate": "2025-07-12",
+      "endDate": "2025-07-13",
+      "notes": "Temperamento fuerte"
+    }
+  ]
+}
