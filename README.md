@@ -31,14 +31,14 @@ PROJECT-AUTH/
 │   │   └── styles.css
 │   ├── js/
 │   │   └── utils/
-│   │       ├── loading.js
-│   │       ├── sweetalert.js
-│   │       ├── dashboard.js
-│   │       ├── dashboardW.js
-│   │       ├── index.js
-│   │       ├── login.js
-│   │       ├── main.js
-│   │       └── register.js
+│   │   |   ├── loading.js
+│   │   |   ├── sweetalert.js
+│   │   ├── dashboard.js
+│   │   ├── dashboardW.js
+│   │   ├── index.js
+│   │   ├── login.js
+│   │   ├── main.js
+│   │   └── register.js
 │   └── views/
 │       ├── dashboard.html
 │       ├── dashboardW.html
